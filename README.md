@@ -4,9 +4,9 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique:true|
-|mail|string|null: false, unique:true|
-|password|string|null: false, unique:true|
+|name|string|null: false, unique: true, index: true|
+|mail|string|null: false, unique: true|
+|password|string|null: false, unique: true|
 
 ### Association
 - has_many :users_groups
@@ -16,7 +16,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique:true|
+|name|string|null: false, unique: true|
 
 ### Association
 - has_many :users_groups
@@ -29,8 +29,8 @@
 |messages|text||
 |images|string||
 |time|timestamps|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -39,8 +39,8 @@
 ## users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
