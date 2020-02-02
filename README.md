@@ -4,20 +4,22 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_name|string|null: false, unique:true|
+|name|string|null: false, unique:true|
 |mail|string|null: false, unique:true|
 |password|string|null: false, unique:true|
 
 ### Association
+- has_many :users_groups
 - has_many :groups, through: :users_groups
 - has_many :chats
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, unique:true|
+|name|string|null: false, unique:true|
 
 ### Association
+- has_many :users_groups
 - has_many :users, through: :users_groups
 - has_many :chats
 
@@ -31,8 +33,8 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs :user
-- belongs :group
+- belongs_to :user
+- belongs_to :group
 
 ## users_groupsテーブル
 |Column|Type|Options|
