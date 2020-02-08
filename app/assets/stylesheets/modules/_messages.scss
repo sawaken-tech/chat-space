@@ -1,0 +1,29 @@
+$fontwhite: #ffffff;
+$btncolor: #38aef0;
+$mainfontcolor: #333333;
+$subfontcolor: #999999;
+
+@mixin flex_bteween {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin flex_end {
+  display: flex;
+  justify-content: flex-end;
+}
+@mixin hei_wid($height,$width){
+  height: $height;
+  width: $width;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,104 @@
+.ChatMain {
+  @include hei_wid(100vh,calc(100vw - 300px));
+  background-color: $fontwhite;
+  &__GroupInfo {
+    height: 100px;
+    border-bottom: 1px solid #eeeeee;
+    @include flex_bteween;
+    &__leftbox{
+      padding-left: 40px;
+      &--groupname {
+        margin: 35px 0 15px;
+        color: $mainfontcolor;
+        font-size: 20px;
+      }
+      &--groupmenber {
+        margin-bottom: 0;
+        color: $subfontcolor;
+        font-size: 12px;
+      }
+    }
+    &__rightbox {
+      @include hei_wid(40px,72px);
+      margin: 28px 20px;
+      border: 1px solid $btncolor;
+      text-align: center;
+      &--editbtn {
+        font-size: 16px;
+        line-height: 40px;
+        a {
+          color: $btncolor;
+          display: block;
+        }
+      }
+    }
+  }
+  &__MessagesList {
+    height: calc(100vh - 100px - 90px);
+    background-color: #fafafa;
+    padding: 35px 40px 46px;
+    overflow-y: auto;
+    &__box {
+      padding-bottom: 46px;
+      &__group {
+        margin-bottom: 12px;
+        display: flex;
+        &--name {
+          color: $mainfontcolor;
+          font-size: 16px;
+        }
+        &--date {
+          margin-left: 10px;
+          color: $subfontcolor;
+          font-size: 12px;
+        }
+      }
+      &__message {
+        color: #434a54;
+        font-size: 14px;
+      }
+    }
+  }
+  &__MessageForm {
+    height: 90px;
+    background-color: #d2d2d2;
+    &__FormBox {
+      height: 90px;
+      padding: 20px 40px;
+      display: flex;
+      &__textbox {
+        @include hei_wid(50px,100%);
+        position: relative;
+        &--text {
+          width: 100%;
+          padding: 0 40px 0 10px;
+          position: absolute;
+          line-height: 50px;
+        }
+        &--img {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 1.5rem;
+          cursor: pointer;
+          input {
+            display: none;
+          }
+        }
+      }
+      &--SendBtn {
+        @include hei_wid(50px,100px);
+        margin-left: 15px; 
+        border: 1px solid $btncolor;
+        background-color: $btncolor;
+        font-size: 16px;
+        line-height: 50px;
+        text-align: center;
+        a {
+          color: $fontwhite;
+          display: block;
+        }
+      }
+    }
+  }
+}
