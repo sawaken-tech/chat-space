@@ -2,14 +2,15 @@
   .SideBar__UserName
     .SideBar__UserName__TopItems
       .SideBar__UserName__TopItems__name
-        %p sawa
+        %h3
+          = current_user.name
       .SideBar__UserName__TopItems__icons
         %ul.SideBar__UserName__TopItems__icons__btn
           %li.SideBar__UserName__TopItems__icons__btn--edit
-            = link_to "#" do
+            = link_to do
               = icon('fas', 'edit')
           %li.SideBar__UserName__TopItems__icons__btn--cog
-            = link_to "#" do
+            = link_to edit_user_path(current_user) do
               = icon('fas', 'cog')
   .SideBar__GroupList
     .GroupBox
