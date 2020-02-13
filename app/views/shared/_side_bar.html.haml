@@ -7,65 +7,16 @@
       .SideBar__UserName__TopItems__icons
         %ul.SideBar__UserName__TopItems__icons__btn
           %li.SideBar__UserName__TopItems__icons__btn--edit
-            = link_to do
+            = link_to new_group_path do
               = icon('fas', 'edit')
           %li.SideBar__UserName__TopItems__icons__btn--cog
             = link_to edit_user_path(current_user) do
               = icon('fas', 'cog')
   .SideBar__GroupList
-    .GroupBox
-      .GroupBox__GroupName
-        %p techcamp1
-      .GroupBox__GroupMessage
-        %p まだメッセージがありません
-    .GroupBox
-      .GroupBox__GroupName
-        %p techcamp2
-      .GroupBox__GroupMessage
-        %p まだメッセージがありません
-    .GroupBox
-      .GroupBox__GroupName
-        %p techcamp3
-      .GroupBox__GroupMessage
-        %p まだメッセージがありません
-    .GroupBox
-      .GroupBox__GroupName
-        %p techcamp4
-      .GroupBox__GroupMessage
-        %p まだメッセージがありません
-    .GroupBox
-      .GroupBox__GroupName
-        %p techcamp5
-      .GroupBox__GroupMessage
-        %p まだメッセージがありません
-    .GroupBox
-      .GroupBox__GroupName
-        %p techcamp6
-      .GroupBox__GroupMessage
-        %p まだメッセージがありません
-    .GroupBox
-      .GroupBox__GroupName
-        %p techcamp7
-      .GroupBox__GroupMessage
-        %p まだメッセージがありません
-    .GroupBox
-      .GroupBox__GroupName
-        %p techcamp8
-      .GroupBox__GroupMessage
-        %p まだメッセージがありません
-    .GroupBox
-      .GroupBox__GroupName
-        %p techcamp9
-      .GroupBox__GroupMessage
-        %p まだメッセージがありません
-    .GroupBox
-      .GroupBox__GroupName
-        %p techcamp10
-      .GroupBox__GroupMessage
-        %p まだメッセージがありません
-    .GroupBox
-      .GroupBox__GroupName
-        %p techcamp11
-      .GroupBox__GroupMessage
-        %p まだメッセージがありません
-    
+    - current_user.groups.each do |groupbox|
+      .groupbox
+        = link_to '#' do
+          .groupbox__GroupName
+            = groupbox.name
+          .groupbox__GroupMessage
+            %p まだメッセージがありません
