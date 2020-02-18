@@ -77,11 +77,11 @@
         }
         &--img {
           position: absolute;
-          top: 10px;
+          top: 7px;
           right: 10px;
           font-size: 1.5rem;
           cursor: pointer;
-          input {
+          .hidden {
             display: none;
           }
         }
@@ -94,10 +94,9 @@
         font-size: 16px;
         line-height: 50px;
         text-align: center;
-        a {
-          color: $fontwhite;
-          display: block;
-        }
+        color: $fontwhite;
+        display: block;
+        cursor: pointer;
       }
     }
   }
