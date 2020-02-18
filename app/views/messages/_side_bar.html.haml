@@ -15,7 +15,7 @@
   .SideBar__GroupList
     - current_user.groups.each do |groupbox|
       .groupbox
-        = link_to '#' do
+        = link_to group_messages_path(groupbox) do
           .groupbox__GroupName
             = groupbox.name
           .groupbox__GroupMessage
