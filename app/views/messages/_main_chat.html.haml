@@ -66,11 +66,12 @@
       .ChatMain__MessagesList__box__message
         %p おはよう！7
   .ChatMain__MessageForm
-    .ChatMain__MessageForm__FormBox
-      .ChatMain__MessageForm__FormBox__textbox
-        %input.ChatMain__MessageForm__FormBox__textbox--text{name: "", placeholder: "type a message", type: "text", value: ""}
-        %label.ChatMain__MessageForm__FormBox__textbox--img
-          = icon('fas', 'image')
-          %input{type: "file"}
-      .ChatMain__MessageForm__FormBox--SendBtn
-        = link_to 'Send', '#'
+    = form_for [@group, @message] do |f|
+      .ChatMain__MessageForm__FormBox
+        .ChatMain__MessageForm__FormBox__textbox
+          = f.text_field :content, class: 'ChatMain__MessageForm__FormBox__textbox', placeholder: 'type a message'
+          .ChatMain__MessageForm__FormBox__textbox--img
+            =f.label :image, class: 'ChatMain__MessageForm__FormBox__textbox--img' do
+              = icon('fas', 'image')
+              = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'ChatMain__MessageForm__FormBox--SendBtn'
