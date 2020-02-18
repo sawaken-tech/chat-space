@@ -9,62 +9,8 @@
       .ChatMain__GroupInfo__rightbox--editbtn
         = link_to 'Edit', '#'
   .ChatMain__MessagesList
-    .ChatMain__MessagesList__box
-      .ChatMain__MessagesList__box__group
-        .ChatMain__MessagesList__box__group--name
-          %p sawa
-        .ChatMain__MessagesList__box__group--date
-          %p 2020/02/06(THU) 07:35:00
-      .ChatMain__MessagesList__box__message
-        %p おはよう！
-    .ChatMain__MessagesList__box
-      .ChatMain__MessagesList__box__group
-        .ChatMain__MessagesList__box__group--name
-          %p sawa
-        .ChatMain__MessagesList__box__group--date
-          %p 2020/02/06(THU) 07:35:00
-      .ChatMain__MessagesList__box__message
-        %p おはよう！2
-    .ChatMain__MessagesList__box
-      .ChatMain__MessagesList__box__group
-        .ChatMain__MessagesList__box__group--name
-          %p sawa
-        .ChatMain__MessagesList__box__group--date
-          %p 2020/02/06(THU) 07:35:00
-      .ChatMain__MessagesList__box__message
-        %p おはよう！3
-    .ChatMain__MessagesList__box
-      .ChatMain__MessagesList__box__group
-        .ChatMain__MessagesList__box__group--name
-          %p sawa
-        .ChatMain__MessagesList__box__group--date
-          %p 2020/02/06(THU) 07:35:00
-      .ChatMain__MessagesList__box__message
-        %p おはよう！4
-    .ChatMain__MessagesList__box
-      .ChatMain__MessagesList__box__group
-        .ChatMain__MessagesList__box__group--name
-          %p sawa
-        .ChatMain__MessagesList__box__group--date
-          %p 2020/02/06(THU) 07:35:00
-      .ChatMain__MessagesList__box__message
-        %p おはよう！5
-    .ChatMain__MessagesList__box
-      .ChatMain__MessagesList__box__group
-        .ChatMain__MessagesList__box__group--name
-          %p sawa
-        .ChatMain__MessagesList__box__group--date
-          %p 2020/02/06(THU) 07:35:00
-      .ChatMain__MessagesList__box__message
-        %p おはよう！6
-    .ChatMain__MessagesList__box
-      .ChatMain__MessagesList__box__group
-        .ChatMain__MessagesList__box__group--name
-          %p sawa
-        .ChatMain__MessagesList__box__group--date
-          %p 2020/02/06(THU) 07:35:00
-      .ChatMain__MessagesList__box__message
-        %p おはよう！7
+    .messages
+      = render @messages
   .ChatMain__MessageForm
     = form_for [@group, @message] do |f|
       .ChatMain__MessageForm__FormBox
