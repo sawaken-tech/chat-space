@@ -1,6 +1,8 @@
 class GroupsController < ApplicationController
 
   def index
+    @group = Group.find(params[:id])
+    @gruop.users << current_user
   end
 
   def new
