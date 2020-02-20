@@ -10,7 +10,7 @@
             = user.name.chomp
     .ChatMain__GroupInfo__rightbox
       .ChatMain__GroupInfo__rightbox--editbtn
-        = link_to 'Edit', '#'
+        = link_to 'Edit', edit_group_path(@group)
   .ChatMain__MessagesList
     .messages
       = render @messages
