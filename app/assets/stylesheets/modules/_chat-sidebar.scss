@@ -35,7 +35,7 @@
   &__GroupList {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
-    overflow-y: auto;
+    overflow: scroll;
     padding: 20px 20px 0;
     .groupbox {
       margin-bottom: 40px;

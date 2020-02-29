@@ -36,11 +36,13 @@
       }
     }
   }
-  &__MessagesList {
+  .messages {
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
     padding: 35px 40px 46px;
-    overflow-y: auto;
+    overflow: scroll;
+  }
+  &__MessagesList {
     &__box {
       padding-bottom: 46px;
       &__group {
